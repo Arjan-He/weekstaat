@@ -1,0 +1,16 @@
+settings.ini
+db.sqlite3
+__pycache__
+*.pyc
+*.log
+*.pot
+#media
+.vscode
+
+# django migrations (toegevoegd 27-7-20 AH: na migrations/postgres probleem op server)
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py
+
+# caching folder van SASS en compressor
+/static/CACHE
