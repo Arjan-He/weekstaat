@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Uitwerking Geeksforgeeks.org</title>
+  </head>
+  <body>
+    <main class="container">
+    <h1>Tijdschrijven</h1>
+    <p>
+      Bron: <a href="https://www.geeksforgeeks.org/django-formsets/">geeksforgeeks.org</a>
+      <p>
+        Dit is een uitwerking van een 'los' formulier, dus niet gekoppeld aan een model. Je geeft de basis van het formulier op en geeft aan formset_factory door hoeveel kopieën je van dit formulier wilt (extra=3).
+        De uitwerking is gedaan met een 'formset.as_p' je kunt ook het formulier zelf opbouwen, als een tabel weergeven, of met crispyforms tonen.
+      </p>
+    </p>
+    <form method="POST" enctype="multipart/form-data">
+      {{ formset.management_data }}
+      {% csrf_token %}
+      {{ formset.as_table }}
+      <input type="submit" value="Submit">
+  </form>
+</main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  </body>
+</html>
